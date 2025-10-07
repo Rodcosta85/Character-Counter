@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@theme {
+  /* cores globais do projeto */
+  --color-almost-black: #12131A;
+  --color-off-black: #21222C;
+  --color-dark-gray: #2A2B37;
+  --color-medium-gray: #404254;
+  --color-light-gray: #E4E4EF;
+  --color-off-white: #F2F2F7;
+  --color-basic-white: #FFFFFF;
+  --color-light-purple: #D3A0FA;
+  --color-medium-purple: #C27CF8;
+  --color-strong-orange: #FF9F00;
+  --color-light-red: #FE8159;
+  --color-medium-red: #DA3701;
+
+  /* tamanhos de fonte e de altura de linha */
+  --text-preset-1: 64px;
+  --tracking-preset-1: -1px;
+  --text-preset-2: 24px;
+  --tracking-preset-2: -1px;
+  --text-preset-3: 20px;
+  --tracking-preset-3: -0.6px;
+  --text-preset-4: 16px;
+  --tracking-preset-4: -0.6px;
+
+  /* font-family geral da página */
+  --font-dm-sans: "DM Sans", sans-serif;
+
+  /* border-radius, precisa começar com "radius" para definir como uma variavel global */
+  --radius-zero: 0;
+  --radius-four: 4px;
+  --radius-six: 6px;
+  --radius-eight: 8px;
+  --radius-ten: 10px;
+  --radius-twelve: 12px;
+  --radius-sixteen: 16px;
+  --radius-twenty: 20px;
+  --radius-twenty-four: 24px;
+
+  /* breakpoints customizados para o design responsivo */
+  --breakpoint-tablet: 830px;
+  --breakpoint-mobile: 500px;
+}
