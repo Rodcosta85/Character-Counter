@@ -40,6 +40,7 @@
   --radius-twenty-four: 24px;
 
   /* breakpoints customizados para o design responsivo */
-  --breakpoint-tablet: 830px;
-  --breakpoint-mobile: 500px;
+  --breakpoint-desktop: 1023px;
+  --breakpoint-tablet: 768px;
+  --breakpoint-mobile: 330px;
 }

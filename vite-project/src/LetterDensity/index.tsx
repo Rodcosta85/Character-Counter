@@ -54,10 +54,10 @@ const LetterDensity: React.FC<TextareaProps> = ({ textarea, charsWithoutSpaces, 
                 {frequencies.map(({ letter, count, percentage }) => (
                     <div
                         key={letter}
-                        className='flex items-center justify-between'
+                        className='flex items-center desktop:justify-between tablet:justify-between mobile:justify-start'
                     >
-                        <p className={`text-preset-4 ${currentTheme.letters} w-[1rem]`}>{letter.toUpperCase()}</p>
-                        <div className={`w-[53.6875rem] h-[0.75rem] rounded-full ${currentTheme.emptyPercentage} relative z-1`}>
+                        <p className={`text-preset-4 ${currentTheme.letters} w-[1.5rem]`}>{letter.toUpperCase()}</p>
+                        <div className={`desktop:w-[53.6875rem] tablet:w-[85%] mobile:w-[75%] h-[0.75rem] rounded-full ${currentTheme.emptyPercentage} relative z-1`}>
                             <div
                                 style={{ width: `${percentage}%` }}
                                 className={`h-[0.75rem] rounded-full bg-light-purple absolute top-0 left-0 z-99`}>

@@ -58,12 +58,17 @@ const Inputs: React.FC<TextareaProps> = ({ textarea, charsWithoutSpaces, handleC
     if (readingTimeNum < 1) {
         timeVal = 'seconds'
         readingTimeNum = Math.round(readingTimeNum * 60);
-    } 
+        if (readingTimeNum === 1) {
+            timeVal = 'second'
+        }
+    }
 
 
-    const inputNumberStyles = `${currentTheme.label} w-[3.6rem] h-[1.8125rem] pl-[0.75rem] pr-[0.75rem] pt-[0.25rem] pb-[0.25rem] rounded-six border-[1px] ${currentTheme.inputBorder} focus:outline-none appearance-none [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none [-moz-appearance:textfield]`
-    const textareaStyles = `w-[61.875rem] h-[12.5rem] border-[2px] p-[1.25rem] ${currentTheme.textareaBg} ${currentTheme.textareaBorder} hover:${currentTheme.textareaBg} rounded-twelve ${currentTheme.textareaText} ${currentTheme.textareaPlaceholder} focus:shadow-[0_0_10px_0_var(--light-purple)]'
-`
+    const inputNumberStyles = `${currentTheme.label} w-[3.6rem] h-[1.8125rem] mobile:h-[1.5rem] pl-[0.75rem] pr-[0.75rem] pt-[0.25rem] pb-[0.25rem] rounded-six border-[1px] ${currentTheme.inputBorder} focus:outline-none appearance-none [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none [-moz-appearance:textfield]`
+    const textareaStyles = `desktop:w-[61.875rem] h-[12.5rem] border-[2px] p-[1.25rem] ${currentTheme.textareaBg} ${currentTheme.textareaBorder} hover:${currentTheme.textareaBg} rounded-twelve ${currentTheme.textareaText} ${currentTheme.textareaPlaceholder} focus:shadow-[0_0_10px_0_var(--light-purple)]
+    tablet:w-full
+    mobile:w-full
+    `
 
     return (
         <div className='flex flex-col gap-[1rem]'>
@@ -79,8 +84,11 @@ const Inputs: React.FC<TextareaProps> = ({ textarea, charsWithoutSpaces, handleC
                     <p className="text-preset-4 text-light-red">Limit reached! Your text exceeds {limitNum} characters.</p>
                 </div>
             </div>
-            <div className='flex justify-between items-center h-[1.8125rem]'>
-                <div className='flex gap-[1.5rem]'>
+            <div className='flex justify-between items-center desktop:h-[1.8125rem]  
+            tablet:flex-row tablet:h-[1.8125rem]
+            mobile:h-[5.4375rem] mobile:flex-col mobile:gap-[0.75rem] mobile:items-start
+            '>
+                <div className='flex gap-[1.5rem] tablet:flex-row mobile:flex-col mobile:gap-[0.75rem]'>
                     {/* primeira checkbox - a que corta os espaços */}
                     <ExcludeSpaces
                         buttonArr={buttonArr}

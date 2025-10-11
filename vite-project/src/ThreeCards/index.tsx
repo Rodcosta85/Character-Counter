@@ -14,9 +14,15 @@ const ThreeCards: React.FC<CardProps> = ({ charsWithoutSpaces, wordCount, senten
 
 
   return (
-    <div className='flex justify-between items-center gap-[1rem]'>
+    <div className='flex flex-row justify-between items-center gap-[1rem]
+    tablet:flex-row
+    mobile:flex-col
+    '>
 
-      <div className=' flex w-[19.95rem] h-[9.375rem] p-[1rem] bg-light-purple rounded-twelve overflow-hidden relative'>
+      <div className=' flex w-[19.95rem] h-[9.375rem] p-[1rem] bg-light-purple rounded-twelve overflow-hidden relative
+      tablet:w-full
+      mobile:w-full
+      '>
         <div className='w-full flex flex-col gap-[0.5rem] relative z-10'>
           <h1 className='text-preset-1 text-almost-black font-bold h-[4rem]'>{charsWithoutSpaces}</h1>
           <p className='text-preset-3 text-almost-black w-full'>Total Characters</p>
@@ -24,11 +30,14 @@ const ThreeCards: React.FC<CardProps> = ({ charsWithoutSpaces, wordCount, senten
         <img
           src={Shape1}
           alt=""
-          className='w-[9.375rem] h-[9.375rem] absolute top-0 right-[-1.8rem] z-0'
+          className='w-[9.375rem] h-[9.375rem] absolute top-0 right-[-1.8rem] mobile:right-[-4rem] z-0'
         />
       </div>
 
-      <div className='flex w-[19.95rem] h-[9.375rem] p-[1rem] bg-strong-orange rounded-twelve overflow-hidden relative'>
+      <div className='flex w-[19.95rem] h-[9.375rem] p-[1rem] bg-strong-orange rounded-twelve overflow-hidden relative
+      tablet:w-full
+      mobile:w-full
+      '>
         <div className='w-full flex flex-col gap-[0.5rem] relative z-10'>
           <h1 className='text-preset-1 text-almost-black font-bold h-[4rem]'>{wordCount}</h1>
           <p className='text-preset-3 text-almost-black w-full'>Word Count</p>
@@ -36,11 +45,14 @@ const ThreeCards: React.FC<CardProps> = ({ charsWithoutSpaces, wordCount, senten
         <img
           src={Shape2}
           alt=""
-          className='w-[9.375rem] h-[9.375rem] absolute top-0 right-[-1.8rem] z-0'
+          className='w-[9.375rem] h-[9.375rem] absolute top-0 right-[-1.8rem] mobile:right-[-4rem] z-0'
         />
       </div>
 
-      <div className='flex w-[19.95rem] h-[9.375rem] p-[1rem] bg-light-red rounded-twelve overflow-hidden relative'>
+      <div className='flex w-[19.95rem] h-[9.375rem] p-[1rem] bg-light-red rounded-twelve overflow-hidden relative
+      tablet:w-full
+      mobile:w-full
+      '>
         <div className='w-full flex flex-col gap-[0.5rem] relative z-10'>
           <h1 className='text-preset-1 text-almost-black font-bold h-[4rem]'>{sentencesCount}</h1>
           <p className='text-preset-3 text-almost-black w-full'>Sentence Count</p>
@@ -48,7 +60,7 @@ const ThreeCards: React.FC<CardProps> = ({ charsWithoutSpaces, wordCount, senten
         <img
           src={Shape3}
           alt=""
-          className='w-[9.375rem] h-[9.375rem] absolute top-0 right-[-1.8rem] z-0'
+          className='w-[9.375rem] h-[9.375rem] absolute top-0 right-[-1.8rem] mobile:right-[-4rem] z-0'
         />
       </div>
     </div>

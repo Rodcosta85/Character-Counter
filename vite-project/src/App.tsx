@@ -89,20 +89,27 @@ function App() {
 
 
   return (
-    <div className={`${currentTheme.overallBg} flex justify-center w-full min-h-[100vh] pt-[32px] pb-[32px] font-dm-sans`}>
+    <div className={`${currentTheme.overallBg} flex justify-center w-full min-h-[100vh] font-dm-sans pt-[2rem] pb-[2rem]
+    tablet:pl-[2rem] tablet:pr-[2rem]
+    mobile:pl-[1rem] mobile:pr-[1rem]
+     `}>
 
       {/* container do conteudo em geral */}
-      <div className='flex flex-col items-center w-[990px] min-h-[799px] gap-[3rem]'>
+      <div className='flex flex-col justify-between min-h-[799px] 
+      desktop:w-[990px] desktop:gap-[3rem]
+      tablet:w-[100%] tablet:gap-[2.5rem] 
+      mobile:w-[100%] mobile:gap-[2.5rem]
+      '>
         <Header
           currentTheme={currentTheme}
           handleChangeTheme={handleChangeTheme}
         />
-        <h1 className={`text-preset-1 font-dm-sans ${currentTheme.mainHeading} font-bold text-center leading-[4rem] tracking-[-0.0625rem]`}>
+        <h1 className={`desktop:text-preset-1 mobile:text-[2.5rem] font-dm-sans ${currentTheme.mainHeading} font-bold text-center desktop:leading-[4rem] mobile:leading-[2.5rem] tracking-preset-1`}>
           Analyze your text <br /> in real-time.
         </h1>
         <Inputs
           textarea={textarea}
-          charsWithoutSpaces={charsWithoutSpaces}
+          charsWithoutSpaces={charsWithoutSpaces}   
           handleCharCount={handleCharCount}
           trimChars={trimChars}
           checked={checked}
